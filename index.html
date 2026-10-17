@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11101b">
+  <meta name="description" content="Индивидуальная консультация по хиромантии: символика линий ладони и вопросы для самопознания.">
+  <title>Тайны ладони — индивидуальная консультация</title>
+  <style>
+    :root {
+      --bg: #11101b;
+      --panel: rgba(30, 27, 46, .86);
+      --gold: #d9b779;
+      --cream: #f7f0e4;
+      --muted: #c5bbcd;
+      --line: rgba(217,183,121,.28);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--cream);
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(ellipse at 75% 12%, rgba(103,72,126,.28), transparent 36%),
+        radial-gradient(ellipse at 12% 55%, rgba(92,66,109,.18), transparent 38%),
+        var(--bg);
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1100px, 91%); margin: auto; }
+    header { padding: 22px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+    .nav { display:flex; justify-content:space-between; align-items:center; gap:16px; }
+    .brand { color:var(--gold); font-size:1.1rem; letter-spacing:.12em; text-transform:uppercase; }
+    .nav a { text-decoration:none; color:var(--muted); font-size:.95rem; }
+    .hero { min-height: 620px; display:grid; grid-template-columns: 1.08fr .92fr; align-items:center; gap:42px; padding:65px 0 75px; }
+    .eyebrow { color:var(--gold); text-transform:uppercase; letter-spacing:.19em; font: .76rem Arial,sans-serif; }
+    h1 { font-size:clamp(2.6rem, 6vw, 5.2rem); line-height:1.02; font-weight:normal; margin:18px 0 24px; }
+    h1 span { color:var(--gold); font-style:italic; }
+    .lead { color:var(--muted); font-size:1.13rem; max-width:570px; }
+    .actions { display:flex; gap:14px; flex-wrap:wrap; margin-top:30px; }
+    .btn { display:inline-block; border:1px solid var(--gold); padding:14px 22px; border-radius:3px; text-decoration:none; font:600 .9rem Arial,sans-serif; transition:.2s; }
+    .btn.primary { background:var(--gold); color:#201a27; }
+    .btn:hover { transform:translateY(-2px); filter:brightness(1.08); }
+    .visual { min-height:430px; border:1px solid var(--line); border-radius:48% 48% 5px 5px; position:relative; overflow:hidden; display:grid; place-items:center; background:linear-gradient(155deg,rgba(92,65,112,.42),rgba(23,20,35,.6)); }
+    .visual:before, .visual:after { content:""; position:absolute; border:1px solid rgba(217,183,121,.26); border-radius:50%; width:320px; height:320px; }
+    .visual:after { width:390px; height:390px; }
+    .palm-art { width:min(75%,310px); z-index:1; filter:drop-shadow(0 12px 28px rgba(0,0,0,.25)); }
+    .visual-note { position:absolute; bottom:25px; z-index:2; color:var(--gold); font-style:italic; letter-spacing:.08em; font-size:.9rem; }
+    section { padding:74px 0; }
+    .section-title { font-weight:normal; font-size:clamp(2rem,4vw,3.1rem); line-height:1.1; margin:12px 0 18px; }
+    .section-intro { color:var(--muted); max-width:650px; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:32px; }
+    .card { background:var(--panel); border:1px solid rgba(217,183,121,.18); padding:27px; border-radius:5px; }
+    .num { color:var(--gold); font-size:1.6rem; }
+    .card h3 { font-weight:normal; font-size:1.35rem; margin:10px 0; }
+    .card p { color:var(--muted); margin-bottom:0; }
+    .quote { border-top:1px solid var(--line); border-bottom:1px solid var(--line); text-align:center; padding:52px 10px; font-size:clamp(1.4rem,3vw,2.2rem); font-style:italic; color:#ead9b8; }
+    .lead-section { background:linear-gradient(130deg,rgba(62,45,78,.5),rgba(24,21,36,.85)); border-top:1px solid rgba(255,255,255,.06); }
+    .lead-grid { display:grid; grid-template-columns:1fr .9fr; gap:50px; align-items:start; }
+    form { background:rgba(17,16,27,.62); border:1px solid var(--line); padding:28px; border-radius:5px; }
+    label { display:block; font: .85rem Arial,sans-serif; color:var(--muted); margin:0 0 7px; }
+    input, select, textarea { width:100%; padding:13px 12px; margin-bottom:17px; background:#201d2e; color:var(--cream); border:1px solid #51455f; border-radius:3px; font:1rem Arial,sans-serif; }
+    input:focus, select:focus, textarea:focus { outline:1px solid var(--gold); border-color:var(--gold); }
+    .small { color:#b8aec2; font: .78rem/1.5 Arial,sans-serif; }
+    .form-message { display:none; margin-top:15px; padding:13px; border:1px solid var(--gold); color:var(--cream); }
+    .contact-hint { color:var(--muted); font-size:.92rem; }
+    footer { padding:26px 0; color:#a89db4; font: .8rem Arial,sans-serif; border-top:1px solid rgba(255,255,255,.08); }
+    @media (max-width:760px) {
+      .hero, .lead-grid { grid-template-columns:1fr; }
+      .hero { padding-top:48px; gap:34px; }
+      .visual { min-height:360px; }
+      .cards { grid-template-columns:1fr; }
+      .nav a { font-size:.83rem; }
+      section { padding:55px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">✧ Тайны ладони</div>
+      <a href="#request">Записаться на консультацию ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <div>
+        <div class="eyebrow">Хиромантия • бережный взгляд на себя</div>
+        <h1>Ваша ладонь.<br><span>Ваша история.</span></h1>
+        <p class="lead">Индивидуальная консультация по символике линий ладони — чтобы взглянуть на свои сильные стороны, привычные сценарии и вопросы, которые сейчас важны именно вам.</p>
+        <div class="actions">
+          <a class="btn primary" href="#request">Оставить заявку</a>
+          <a class="btn" href="#how">Как это работает</a>
+        </div>
+        <p class="small" style="margin-top:18px">Хиромантия — традиция символических интерпретаций, а не научный способ предсказания будущего.</p>
+      </div>
+      <div class="visual" aria-label="Декоративная иллюстрация ладони">
+        <svg class="palm-art" viewBox="0 0 300 360" role="img" aria-label="Золотистый контур ладони">
+          <g fill="none" stroke="#d9b779" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M86 303 C70 278 59 249 53 221 C50 208 55 198 64 198 C72 198 78 207 83 220 L96 254 L91 133 C90 117 98 108 108 110 C118 112 121 121 121 135 L126 206 L129 83 C129 67 138 59 148 61 C159 63 162 72 161 87 L160 202 L169 103 C171 89 180 82 190 85 C201 88 202 98 200 112 L190 214 L208 144 C212 131 221 127 230 132 C239 137 239 147 235 161 L217 237 C211 265 199 287 184 306 C157 330 111 326 86 303 Z"/>
+            <path d="M91 254 C111 243 134 245 154 260 C171 273 189 273 208 258"/>
+            <path d="M96 220 C117 204 140 205 158 220 C174 233 190 232 202 220"/>
+            <path d="M121 176 C135 163 151 163 164 174"/>
+            <path d="M110 286 C126 270 148 268 166 284"/>
+            <path d="M150 96 C145 120 147 143 151 164"/>
+          </g>
+          <g fill="#d9b779">
+            <circle cx="148" cy="61" r="3"/><circle cx="53" cy="221" r="3"/><circle cx="230" cy="132" r="3"/>
+          </g>
+        </svg>
+        <div class="visual-note">Символы • линии • смыслы</div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <div class="eyebrow">Что вас ждёт</div>
+        <h2 class="section-title">Внимание к деталям —<br>без громких обещаний</h2>
+        <p class="section-intro">Консультация строится вокруг ваших вопросов. Мы рассматриваем традиционные трактовки линий ладони как повод для размышления, а не как неизбежный сценарий жизни.</p>
+        <div class="cards">
+          <article class="card"><div class="num">01</div><h3>Вы рассказываете о запросе</h3><p>Напишите, что вам хотелось бы обсудить и какой вопрос сейчас занимает больше всего.</p></article>
+          <article class="card"><div class="num">02</div><h3>Изучаем символику</h3><p>Разбираем основные линии и особенности ладони в рамках традиций хиромантии.</p></article>
+          <article class="card"><div class="num">03</div><h3>Подводим итоги</h3><p>Вы получаете понятное объяснение и вопросы для самостоятельного осмысления.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap quote">«Иногда новый взгляд начинается с простого вопроса к самому себе»</div>
+
+    <section class="lead-section" id="request">
+      <div class="wrap lead-grid">
+        <div>
+          <div class="eyebrow">Первый шаг</div>
+          <h2 class="section-title">Обсудим вашу<br>историю?</h2>
+          <p class="section-intro">Оставьте заявку — укажите удобный способ связи и коротко опишите ваш интерес. Я смогу понять, какая консультация вам подойдёт.</p>
+          <p class="contact-hint">После отправки сайт подготовит письмо с вашей заявкой. Для реального приёма заявок нужно указать ваш адрес электронной почты в настройках файла (см. инструкцию).</p>
+        </div>
+        <form id="leadForm">
+          <label for="name">Как к вам обращаться?</label>
+          <input id="name" name="name" autocomplete="name" placeholder="Ваше имя" required>
+          <label for="contact">Электронная почта или мессенджер</label>
+          <input id="contact" name="contact" placeholder="Как с вами связаться?" required>
+          <label for="topic">Что вам интересно?</label>
+          <select id="topic" name="topic" required>
+            <option value="">Выберите тему</option>
+            <option>Основные линии ладони</option>
+            <option>Сильные стороны и самопознание</option>
+            <option>Общий разбор ладони</option>
+            <option>Другое / пока не знаю</option>
+          </select>
+          <label for="message">Ваш вопрос (необязательно)</label>
+          <textarea id="message" name="message" rows="3" placeholder="Пара слов о том, что хотите узнать"></textarea>
+          <button class="btn primary" type="submit" style="width:100%;cursor:pointer">Подготовить заявку</button>
+          <p class="small">Не отправляйте чувствительные личные данные. Отправляя форму, вы соглашаетесь на использование указанных контактов для ответа на заявку.</p>
+          <div id="formMessage" class="form-message" role="status"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> Тайны ладони · Хиромантия представлена как символическая практика и не заменяет профессиональную медицинскую, психологическую или финансовую консультацию.</div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('leadForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const form = this;
+      const button = form.querySelector('button[type="submit"]');
+      const box = document.getElementById('formMessage');
+      const data = {
+        name: form.name.value.trim(),
+        contact: form.contact.value.trim(),
+        topic: form.topic.value,
+        message: form.message.value.trim()
+      };
+      box.style.display = 'block';
+      box.textContent = 'Отправляем заявку…';
+      button.disabled = true;
+      try {
+        const response = await fetch('/api/lead', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(data)
+        });
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(result.error || 'Не удалось отправить заявку.');
+        box.textContent = 'Спасибо! Заявка отправлена. Я свяжусь с вами.';
+        form.reset();
+      } catch (err) {
+        box.textContent = 'Не удалось отправить заявку. Попробуйте позже или свяжитесь с владельцем сайта другим способом.';
+      } finally {
+        button.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
